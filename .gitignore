@@ -174,3 +174,4 @@ cython_debug/
 /kiwix-seeder_darwin_*
 /kiwix-seeder_linux_*
 /kiwix-seeder_win32_*
+/result
