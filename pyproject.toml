@@ -8,12 +8,12 @@ requires-python = ">=3.12"
 description = "Bittorrent seeder for Kiwix ZIM Catalog"
 readme = "README.md"
 dependencies = [
-    "requests==2.32.3",
+    "requests==2.32.4",
     "humanfriendly==10.0",
-    "iso639-lang==2.5.1",
+    "iso639-lang==2.6.3",
     "xmltodict==0.14.2",
-    "qbittorrent-api==2024.12.71",
-    "rich-argparse==1.6.0",
+    "qbittorrent-api==2025.7.0",
+    "rich-argparse==1.7.1",
 ]
 authors = [
   { name = "Kiwix", email = "dev@kiwix.org" },
