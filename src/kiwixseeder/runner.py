@@ -141,6 +141,7 @@ class Runner:
                 logger.debug(f"* {book!s}")
 
     def remove_outdated_torrents(self):
+        return
         if not self.manager.btihs:
             return
 
