@@ -350,17 +350,8 @@ def prepare_context(raw_args: list[str]) -> None:
     args_dict["keep_for"] = humanfriendly.parse_timespan(args_dict["keep_for"])
 
     # qbittorrent client
-    conn = QbtConnection.using(args_dict["qbt_url"])
     args_dict["qbt"] = (
-        qbittorrentapi.Client(  # pyright: ignore [reportUnknownMemberType]
-            host=f"{conn.scheme}://{conn.host}",
-            port=conn.port,
-            username=conn.username,
-            password=conn.password,
-            VERIFY_WEBUI_CERTIFICATE=not args_dict.get(
-                "qbt_insecure", parser.get_default("qbt_insecure")
-            ),
-        )
+        qbittorrentapi.Client(args_dict["qbt_url"])
     )
     del args_dict["qbt_url"]
 
